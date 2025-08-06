@@ -1,183 +1,333 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Freedom for Students by Call of Freedom</title>
-  <meta name="description" content="Freedom for Students (F4S) — student privacy & internet freedom resource. Mirrors, wiki, news and guides.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c3aed; --danger:#ff6363; --glass: rgba(255,255,255,0.04);
-      --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#071122 0%, #07121b 60%);color:#e6eef6}
-    a{color:var(--accent);text-decoration:none}
-    header{backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
-    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
-    .grid{display:grid;gap:20px}
-    .nav{display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:800}
-    .logo span{font-size:18px}
-    nav a{margin-left:18px;font-weight:600;color:var(--muted)}
-    .hero{padding:40px 0;display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:center}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
-    h1{margin:0;font-size:34px;line-height:1.02}
-    p.lead{color:var(--muted);margin:12px 0 0}
-    .cta{margin-top:18px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:9px;background:var(--accent);color:white;font-weight:700}
-
-    /* mirrors */
-    .mirrors{display:flex;flex-direction:column;gap:12px}
-    .mirror-row{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
-    .muted{color:var(--muted);font-size:13px}
-
-    /* content */
-    .two-col{display:grid;grid-template-columns:1fr 360px;gap:22px}
-    .small{font-size:13px;color:var(--muted)}
-    footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
-
-    /* responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr;}
-      .two-col{grid-template-columns:1fr}
-      nav a{display:none}
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo" aria-hidden><span>F4S</span></div>
-        <div>
-          <strong>Freedom for Students</strong><br>
-          <span class="small">Fighting for student privacy &amp; internet freedom</span>
-        </div>
-      </div>
-      <nav>
-        <a href="#links">Links</a>
-        <a href="#wiki">Wiki</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <div>
-        <div class="card">
-          <h1>Freedom for Students — F4S</h1>
-          <p class="lead">We document intrusive school surveillance, publish mirror links, and support students demanding digital privacy. This site is a companion to our F4S Wiki.</p>
-
-          <div class="cta">
-            <a class="btn" href="#links">Our Sites</a>
-            <a class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);margin-left:10px;color:var(--muted)" href="#wiki">Open Wiki</a>
-          </div>
-        </div>
-
-        <div style="height:18px"></div>
-
-        <div class="card small">
-          <strong>Latest update</strong>
-          <p class="muted" style="margin:8px 0 0">July 30th 2025 — Added Tor mirror and new cert fingerprints to the Wiki.</p>
-        </div>
-      </div>
-
-      <aside>
-        <div class="card">
-          <strong>Links</strong>
-          <div style="height:10px"></div>
-          <div class="links">
-            <div class="mirror-row">
-              <div>
-                <div style="font-weight:700">Main Wiki</div>
-                <div class="muted">sites.google.com/view/f4swiki</div>
-              </div>
-              <div><a class="btn" href="https://sites.google.com/view/f4swiki" target="_blank">Open</a></div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Freedom for Students — Call of Freedom</title>
+        <meta name="description" content="Freedom for Students (F4S) — Fighting school surveillance, promoting digital privacy and access to knowledge." />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+        <style>
+            :root {
+                --bg: #0f1724;
+                --card: #0b1220;
+                --muted: #9aa4b2;
+                --accent: #7c3aed;
+                --danger: #ff6363;
+                --glass: rgba(255, 255, 255, 0.04);
+                --maxw: 1100px;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                font-family: Inter, system-ui, Arial, sans-serif;
+                background: linear-gradient(180deg, #071122 0%, #07121b 60%);
+                color: #e6eef6;
+            }
+            a {
+                color: var(--accent);
+                text-decoration: none;
+            }
+            header {
+                backdrop-filter: blur(6px);
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            }
+            .container {
+                max-width: var(--maxw);
+                margin: 0 auto;
+                padding: 28px;
+            }
+            .nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            .logo {
+                width: 44px;
+                height: 44px;
+                border-radius: 10px;
+                background: linear-gradient(135deg, var(--accent), #3b82f6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 800;
+            }
+            .logo span {
+                font-size: 18px;
+            }
+            nav a {
+                margin-left: 18px;
+                font-weight: 600;
+                color: var(--muted);
+            }
+            .hero {
+                padding: 40px 0;
+                display: grid;
+                grid-template-columns: 1fr 380px;
+                gap: 32px;
+                align-items: center;
+            }
+            .card {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+                border-radius: 12px;
+                padding: 18px;
+                border: 1px solid rgba(255, 255, 255, 0.03);
+            }
+            h1 {
+                margin: 0;
+                font-size: 34px;
+                line-height: 1.02;
+            }
+            p.lead {
+                color: var(--muted);
+                margin: 12px 0 0;
+            }
+            .cta {
+                margin-top: 18px;
+            }
+            .btn {
+                display: inline-block;
+                padding: 10px 14px;
+                border-radius: 9px;
+                background: var(--accent);
+                color: white;
+                font-weight: 700;
+            }
+            .btn-outline {
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                color: var(--muted);
+            }
+            .mirrors {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .mirror-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 12px;
+                border-radius: 10px;
+                background: var(--glass);
+                border: 1px solid rgba(255, 255, 255, 0.03);
+            }
+            .muted {
+                color: var(--muted);
+                font-size: 13px;
+            }
+            .two-col {
+                display: grid;
+                grid-template-columns: 1fr 360px;
+                gap: 22px;
+            }
+            .small {
+                font-size: 13px;
+                color: var(--muted);
+            }
+            footer {
+                padding: 28px 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.03);
+                margin-top: 40px;
+            }
+            @media (max-width: 900px) {
+                .hero,
+                .two-col {
+                    grid-template-columns: 1fr;
+                }
+                nav a {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container nav">
+                <div class="brand">
+                    <div class="logo" aria-hidden="true"><span>F4S</span></div>
+                    <div>
+                        <strong>Freedom for Students</strong><br />
+                        <span class="small">A project by Call of Freedom — fighting school surveillance</span>
+                    </div>
+                </div>
+                <nav>
+                    <a href="#links">Links</a>
+                    <a href="#wiki">Wiki</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </div>
+        </header>
 
-            <div class="mirror-row">
-              <div>
-                <div style="font-weight:700">Tor Wiki Mirror</div>
-                <div class="muted">(Requires Tor Browser)</div>
-              </div>
-              <div><a class="btn" href="http://dpybvm2uaj2fofq7w6e43qxcppuy2mampnqgyml6jhq6rfegdc46csad.onion/" target="_blank">Open</a></div>
-            </div>
+        <main class="container">
+            <section class="hero">
+                <div>
+                    <div class="card">
+                        <h1>Welcome to Freedom for Students</h1>
+                        <p class="lead">
+                            Call of Freedom’s main public project. We fight restrictive digital environments in schools and support privacy, security and access to knowledge.
+                        </p>
+                        <div class="cta">
+                            <a class="btn" href="#links">View Our Links</a>
+                            <a class="btn btn-outline" href="#wiki">Go to Wiki</a>
+                        </div>
+                    </div>
 
-          </div>
+                    <div style="height: 18px;"></div>
 
-          <div style="height:12px"></div>
-          <div class="small muted">Bookmark all our links!</div>
-        </div>
-      </aside>
-    </section>
+                    <div class="card small">
+                        <strong>Latest update</strong>
+                        <p class="muted" style="margin: 8px 0 0;">August 7, 2025 — Updated Tor mirror, Wiki changelog, new certificates logged.</p>
+                    </div>
+                </div>
 
-    <section class="two-col" style="margin-top:22px">
-      <div>
-        <div class="card">
-          <h3 id="wiki">F4S Wiki — Exposé &amp; Guides</h3>
-          <p class="small muted">Our research, cert fingerprints, change logs, and community reports live on the Wiki. It's hosted on Google Sites for resilience.</p>
+                <aside>
+                    <div class="card">
+                        <strong>Links & Mirrors</strong>
+                        <div style="height: 10px;"></div>
+                        <div class="mirrors">
+                            <div class="mirror-row">
+                                <div>
+                                    <div style="font-weight: 700;">Main Wiki</div>
+                                    <div class="muted">sites.google.com/view/f4swiki</div>
+                                </div>
+                                <div><a class="btn" href="https://sites.google.com/view/f4swiki" target="_blank">Open</a></div>
+                            </div>
+                            <div class="mirror-row">
+                                <div>
+                                    <div style="font-weight: 700;">Tor Mirror</div>
+                                    <div class="muted">(requires Tor Browser)</div>
+                                </div>
+                                <div><a class="btn" href="http://dpybvm2uaj2fofq7w6e43qxcppuy2mampnqgyml6jhq6rfegdc46csad.onion/" target="_blank">Open</a></div>
+                            </div>
+                        </div>
+                        <div style="height: 12px;"></div>
+                        <div class="small muted">Bookmark our mirrors — school filters adapt fast.</div>
+                    </div>
+                </aside>
+            </section>
 
-          <div style="height:12px"></div>
-          <ul>
-            <li><strong>N4L CA Certificate</strong> — information surrounding N4L's entry point.</li>
-            <li><strong>Palo Alto Changeover</strong> — what the migration means for DPI &amp; AI surveillance.</li>
-            <li><strong>Bypassing N4L</strong> — high-level options to bypass restrictions (educational, not operational).</li>
-          </ul>
+            <section class="two-col" style="margin-top: 22px;">
+                <div>
+                    <div class="card" id="wiki">
+                        <h3>F4S Wiki — Research & Docs</h3>
+                        <p class="small muted">Explore what your school doesn't want you to know.</p>
+                        <ul>
+                            <li><strong>N4L Cert Info</strong> — analysis of the NZ filtering system’s certificates.</li>
+                            <li><strong>Palo Alto Changeover</strong> — deeper DPI and AI surveillance tools.</li>
+                            <li><strong>Bypassing Filters</strong> — educational insight, not instructions.</li>
+                        </ul>
+                        <p class="small muted">We oppose surveillance. We do not promote illegal access or network abuse.</p>
+                    </div>
 
-          <div style="height:10px"></div>
-          <p class="small muted">We do not condone illegal activity. Our aim is to document overreach, educate about privacy, and provide resilient access to information.</p>
-        </div>
+                    <div style="height: 14px;"></div>
 
-        <div style="height:14px"></div>
+                    <div class="card" id="about">
+                        <h3>About Call of Freedom / F4S</h3>
 
-        <div class="card">
-          <h3 id="about">About F4S</h3>
-          <p class="small muted">Freedom for Students (F4S) — started as "Call of Freedom" — is a student-led collective fighting for internet freedom and privacy in schools. We collect reports, research certs, and keep mirrors online for access.</p>
-        </div>
-      </div>
+                        <h4 style="margin-top: 12px;">🧭 Our Mission</h4>
+                        <p class="small muted">
+                            Call of Freedom — widely known as <strong>Freedom for Students (F4S)</strong> — is a student-led initiative dedicated to fighting digital surveillance and censorship in school environments. We believe the
+                            internet is a tool for learning, connection, and growth — not control.
+                        </p>
 
-      <aside>
-        <div class="card">
-          <strong>Quick Links</strong>
-          <ul style="margin:12px 0 0;padding-left:18px;color:var(--muted)">
-            <li><a href="https://sites.google.com/view/f4swiki">Wiki (Google Sites)</a></li>
-            <li><a href="#links">Links</a></li>
-            <li><a href="#contact">Contact / Tips</a></li>
-          </ul>
-        </div>
+                        <h4 style="margin-top: 12px;">🔍 Why This Matters</h4>
+                        <p class="small muted">
+                            Across Aotearoa New Zealand (and globally), schools are using advanced filtering systems like <strong>N4L</strong>, AI-assisted content moderation, and deep packet inspection (DPI) to track, restrict, and monitor student
+                            activity online. These systems often operate without meaningful consent or oversight, creating a chilling effect on privacy, learning, and freedom of expression.
+                        </p>
+                        <p class="small muted">
+                            Some schools intercept HTTPS traffic, deploy internal firewalls, and limit access to knowledge under the guise of “safety”. But safety without transparency becomes control. F4S challenges this by shining a light
+                            on what’s really happening behind those locked-down networks.
+                        </p>
 
-        <div style="height:12px"></div>
+                        <h4 style="margin-top: 12px;">📚 Our Work</h4>
+                        <p class="small muted">
+                            Our core project is the <strong>F4S Wiki</strong> — a constantly updated hub of research, technical analysis, mirror links, certificate data, and guides. From exposing SSL interception to documenting Palo Alto
+                            firewall changes and N4L CA fingerprints, we dig into the infrastructure that most students are never meant to see.
+                        </p>
+                        <p class="small muted">
+                            The Wiki is designed to be redundant and censorship-resistant — with multiple mirrors including Tor access. We also maintain this homepage for updates, summaries, and fast access.
+                        </p>
 
-        <div class="card">
-          <strong>Legal &amp; Safety</strong>
-          <p class="small muted">We publish research and commentary. We do not provide step-by-step instructions for illegal bypassing. Use this info responsibly.</p>
-        </div>
-      </aside>
-    </section>
+                        <h4 style="margin-top: 12px;">🛡️ Safety & Ethics</h4>
+                        <p class="small muted">
+                            F4S is not about hacking, exploiting systems, or violating laws. We’re about <em>education</em>, <em>awareness</em>, and <em>resilience</em>. We do not publish detailed how-to instructions for bypassing school
+                            firewalls, nor do we encourage disruptive behavior in educational settings.
+                        </p>
+                        <p class="small muted">
+                            We believe students deserve informed consent when it comes to monitoring and filtering — and the right to question invasive systems imposed on them. We are students ourselves. We understand the risks.
+                        </p>
 
-    <footer>
-      <div class="container">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
-          <div class="small muted">© 2025 Call of Freedom (CoF) known as Freedom for Students (F4S)</div>
-          <div class="small muted">Last updated: August 7th 2025</div>
-        </div>
-      </div>
-    </footer>
-  </main>
+                        <h4 style="margin-top: 12px;">💡 How You Can Help</h4>
+                        <p class="small muted">
+                            Whether you’re a student, parent, teacher, or tech nerd — you can help:
+                        </p>
+                        <ul class="small muted" style="padding-left: 18px; margin-top: 8px;">
+                            <li>✉️ <strong>Submit info</strong> — Got screenshots, logs, or certs? We accept anonymous reports. Email them to us at <b>the.call.of.freedom1+reports at gmail dot com</b></li>
+                            <li>🔗 <strong>Share links</strong> — Distribute the Wiki or mirrors to others quietly.</li>
+                            <li>🛠️ <strong>Contribute research</strong> — If you understand networking or cert chains, get involved.</li>
+                            <li>🧑‍🏫 <strong>Educate</strong> — If you're a teacher, teach your students about DPI and how it affects them.</li>
+                            <li>📢 <strong>Speak up</strong> — Raise awareness in a way that’s safe and respectful in your school.</li>
+                        </ul>
+                        <p class="small muted">
+                            You’re not alone. F4S is growing, and we’re just getting started.
+                        </p>
+                    </div>
+                </div>
 
-  <script>
-    // tiny helper: anchor smooth scroll
-    (function(){
-      if('scrollBehavior' in document.documentElement.style) return;
-      document.querySelectorAll('a[href^="#"]').forEach(function(a){
-        a.addEventListener('click', function(e){e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});});
-      });
-    })();
-  </script>
-</body>
+                <aside>
+                    <div class="card" id="contact">
+                        <strong>Quick Links</strong>
+                        <ul style="margin: 12px 0 0; padding-left: 18px; color: var(--muted);">
+                            <li><a href="https://sites.google.com/view/f4swiki">F4S Wiki (Google Sites)</a></li>
+                            <li><a href="#links">Links</a></li>
+                            <li><a href="#contact">Contact / Report Info</a></li>
+                        </ul>
+                    </div>
+
+                    <div style="height: 12px;"></div>
+
+                    <div class="card">
+                        <strong>Disclaimer</strong>
+                        <p class="small muted">
+                            This site shares information, research, and publicly documented certs. It does not endorse rule-breaking or unauthorized access.
+                        </p>
+                    </div>
+                </aside>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <div class="small muted">© 2025 Call of Freedom — Freedom for Students (F4S)</div>
+                        <div class="small muted">Last updated: August 7, 2025</div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <script>
+            // Smooth scrolling fallback for older browsers
+            (function () {
+                if ("scrollBehavior" in document.documentElement.style) return;
+                document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+                    a.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        document.querySelector(a.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+                    });
+                });
+            })();
+        </script>
+    </body>
 </html>
